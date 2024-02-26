@@ -17,6 +17,15 @@
 		DE4AC3002B8CBB7E00DC4425 /* RegionalCountriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC2FF2B8CBB7E00DC4425 /* RegionalCountriesViewController.swift */; };
 		DE4AC3022B8CBB9200DC4425 /* AllCountriesFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3012B8CBB9200DC4425 /* AllCountriesFlow.swift */; };
 		DE4AC3042B8CBBA800DC4425 /* RegionalCountriesFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3032B8CBBA800DC4425 /* RegionalCountriesFlow.swift */; };
+		DE4AC3082B8CC41300DC4425 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3072B8CC41300DC4425 /* APIRequest.swift */; };
+		DE4AC30A2B8CC71D00DC4425 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3092B8CC71D00DC4425 /* NetworkConstants.swift */; };
+		DE4AC30C2B8CC7F100DC4425 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC30B2B8CC7F100DC4425 /* APIClient.swift */; };
+		DE4AC30F2B8CDF6A00DC4425 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC30E2B8CDF6A00DC4425 /* Country.swift */; };
+		DE4AC3112B8CDF8C00DC4425 /* Name.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3102B8CDF8C00DC4425 /* Name.swift */; };
+		DE4AC3132B8CDFA900DC4425 /* Flags.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3122B8CDFA900DC4425 /* Flags.swift */; };
+		DE4AC3152B8CDFBF00DC4425 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3142B8CDFBF00DC4425 /* Region.swift */; };
+		DE4AC3192B8CE0C800DC4425 /* CountriesRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3182B8CE0C800DC4425 /* CountriesRequests.swift */; };
+		DE4AC31B2B8CE16800DC4425 /* CountryAPIClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */; };
 		F84D97C8AC2A976F7D5A423A /* Pods_rewe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCC70894B53E374306D298 /* Pods_rewe.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +43,15 @@
 		DE4AC2FF2B8CBB7E00DC4425 /* RegionalCountriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalCountriesViewController.swift; sourceTree = "<group>"; };
 		DE4AC3012B8CBB9200DC4425 /* AllCountriesFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesFlow.swift; sourceTree = "<group>"; };
 		DE4AC3032B8CBBA800DC4425 /* RegionalCountriesFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionalCountriesFlow.swift; sourceTree = "<group>"; };
+		DE4AC3072B8CC41300DC4425 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		DE4AC3092B8CC71D00DC4425 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
+		DE4AC30B2B8CC7F100DC4425 /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DE4AC30E2B8CDF6A00DC4425 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		DE4AC3102B8CDF8C00DC4425 /* Name.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Name.swift; sourceTree = "<group>"; };
+		DE4AC3122B8CDFA900DC4425 /* Flags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flags.swift; sourceTree = "<group>"; };
+		DE4AC3142B8CDFBF00DC4425 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
+		DE4AC3182B8CE0C800DC4425 /* CountriesRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRequests.swift; sourceTree = "<group>"; };
+		DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClientType.swift; sourceTree = "<group>"; };
 		E75392DF6B0ED89981600596 /* Pods-rewe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rewe.debug.xcconfig"; path = "Target Support Files/Pods-rewe/Pods-rewe.debug.xcconfig"; sourceTree = "<group>"; };
 		F21C6FAD06B86736C5BAA771 /* Pods-rewe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rewe.release.xcconfig"; path = "Target Support Files/Pods-rewe/Pods-rewe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -88,8 +106,10 @@
 		DE4AC2DE2B8CB34800DC4425 /* rewe */ = {
 			isa = PBXGroup;
 			children = (
-				DE4AC2F52B8CB97A00DC4425 /* UI */,
 				DE4AC2F32B8CB3A300DC4425 /* Application */,
+				DE4AC2F52B8CB97A00DC4425 /* UI */,
+				DE4AC30D2B8CDEE200DC4425 /* Model */,
+				DE4AC3052B8CC3BA00DC4425 /* Network */,
 				DE4AC2F42B8CB3BD00DC4425 /* Resources */,
 			);
 			path = rewe;
@@ -149,6 +169,53 @@
 				DE4AC2FF2B8CBB7E00DC4425 /* RegionalCountriesViewController.swift */,
 			);
 			path = RegionalCountries;
+			sourceTree = "<group>";
+		};
+		DE4AC3052B8CC3BA00DC4425 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC3162B8CE09400DC4425 /* Requests */,
+				DE4AC3172B8CE0A300DC4425 /* APIClients */,
+				DE4AC3062B8CC3F700DC4425 /* BaseAPI */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DE4AC3062B8CC3F700DC4425 /* BaseAPI */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC3092B8CC71D00DC4425 /* NetworkConstants.swift */,
+				DE4AC3072B8CC41300DC4425 /* APIRequest.swift */,
+				DE4AC30B2B8CC7F100DC4425 /* APIClient.swift */,
+			);
+			path = BaseAPI;
+			sourceTree = "<group>";
+		};
+		DE4AC30D2B8CDEE200DC4425 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC30E2B8CDF6A00DC4425 /* Country.swift */,
+				DE4AC3102B8CDF8C00DC4425 /* Name.swift */,
+				DE4AC3122B8CDFA900DC4425 /* Flags.swift */,
+				DE4AC3142B8CDFBF00DC4425 /* Region.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE4AC3162B8CE09400DC4425 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC3182B8CE0C800DC4425 /* CountriesRequests.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		DE4AC3172B8CE0A300DC4425 /* APIClients */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */,
+			);
+			path = APIClients;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,12 +334,21 @@
 			files = (
 				DE4AC3002B8CBB7E00DC4425 /* RegionalCountriesViewController.swift in Sources */,
 				DE4AC2E02B8CB34800DC4425 /* AppDelegate.swift in Sources */,
+				DE4AC30A2B8CC71D00DC4425 /* NetworkConstants.swift in Sources */,
+				DE4AC3152B8CDFBF00DC4425 /* Region.swift in Sources */,
 				DE4AC2FE2B8CBB5F00DC4425 /* AllCountriesViewController.swift in Sources */,
+				DE4AC30F2B8CDF6A00DC4425 /* Country.swift in Sources */,
 				DE4AC2FA2B8CB9CA00DC4425 /* HomeFlow.swift in Sources */,
+				DE4AC30C2B8CC7F100DC4425 /* APIClient.swift in Sources */,
 				DE4AC2F82B8CB99700DC4425 /* HomeTabBarController.swift in Sources */,
 				DE4AC3022B8CBB9200DC4425 /* AllCountriesFlow.swift in Sources */,
+				DE4AC3192B8CE0C800DC4425 /* CountriesRequests.swift in Sources */,
 				DE4AC3042B8CBBA800DC4425 /* RegionalCountriesFlow.swift in Sources */,
+				DE4AC3082B8CC41300DC4425 /* APIRequest.swift in Sources */,
+				DE4AC31B2B8CE16800DC4425 /* CountryAPIClientType.swift in Sources */,
+				DE4AC3112B8CDF8C00DC4425 /* Name.swift in Sources */,
 				DE4AC2E22B8CB34800DC4425 /* SceneDelegate.swift in Sources */,
+				DE4AC3132B8CDFA900DC4425 /* Flags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
