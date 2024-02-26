@@ -6,9 +6,10 @@
 //
 
 import RxFlow
+import Swinject
 
 class HomeFlow {
-    private let rootViewController = HomeTabBarController()
+    private let rootViewController: HomeTabBarController = Container.main.resolve(HomeTabBarController.self)
 }
 
 // MARK: - Flow
@@ -19,8 +20,8 @@ extension HomeFlow: Flow {
     }
 
     func navigate(to step: Step) -> FlowContributors {
-        let allCountriesFlow = AllCountriesFlow()
-        let regionalCountriesFlow = RegionalCountriesFlow()
+        let allCountriesFlow: AllCountriesFlow = Container.main.resolve(AllCountriesFlow.self)
+        let regionalCountriesFlow: RegionalCountriesFlow = Container.main.resolve(RegionalCountriesFlow.self)
 
         Flows.use(allCountriesFlow, regionalCountriesFlow, when: .created) { [weak self] (root1: AllCountriesViewController, root2: RegionalCountriesViewController) in
 

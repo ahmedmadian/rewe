@@ -24,6 +24,6 @@ class RegionalCountriesViewController: UIViewController {
 
     private func setupViewAppearance() {
         view.backgroundColor = .white
-        tabBarItem = UITabBarItem(title: "Regional", image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "EUROPE", image: nil, selectedImage: nil)
     }
 }

@@ -6,19 +6,20 @@
 //
 
 import RxFlow
+import Swinject
 
 class RegionalCountriesFlow {
-    private let rootViewController = RegionalCountriesViewController()
+    private let rootViewController: RegionalCountriesViewController = Container.main.resolve(RegionalCountriesViewController.self)
 }
 
 // MARK: - Flow
 
 extension RegionalCountriesFlow: Flow {
-    var root: RxFlow.Presentable {
+    var root: Presentable {
         rootViewController
     }
     
-    func navigate(to step: RxFlow.Step) -> RxFlow.FlowContributors {
+    func navigate(to step: Step) -> FlowContributors {
         return .none
     }
 }

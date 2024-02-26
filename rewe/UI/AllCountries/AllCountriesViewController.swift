@@ -24,6 +24,6 @@ class AllCountriesViewController: UIViewController {
 
     private func setupViewAppearance() {
         view.backgroundColor = .white
-        tabBarItem = UITabBarItem(title: "All", image: nil, selectedImage: nil)
+        tabBarItem = UITabBarItem(title: "ALL", image: nil, selectedImage: nil)
     }
 }

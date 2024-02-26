@@ -26,6 +26,12 @@
 		DE4AC3152B8CDFBF00DC4425 /* Region.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3142B8CDFBF00DC4425 /* Region.swift */; };
 		DE4AC3192B8CE0C800DC4425 /* CountriesRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3182B8CE0C800DC4425 /* CountriesRequests.swift */; };
 		DE4AC31B2B8CE16800DC4425 /* CountryAPIClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */; };
+		DE4AC31E2B8D016D00DC4425 /* MainContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC31D2B8D016C00DC4425 /* MainContainer.swift */; };
+		DE4AC3202B8D034600DC4425 /* AllCountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC31F2B8D034600DC4425 /* AllCountriesViewModel.swift */; };
+		DE4AC3222B8D046B00DC4425 /* APIServices+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3212B8D046B00DC4425 /* APIServices+Injection.swift */; };
+		DE4AC3242B8D047600DC4425 /* ViewModels+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3232B8D047600DC4425 /* ViewModels+Injection.swift */; };
+		DE4AC3262B8D048300DC4425 /* ViewControllers+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3252B8D048300DC4425 /* ViewControllers+Injection.swift */; };
+		DE4AC3282B8D04C000DC4425 /* Flows+Injection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE4AC3272B8D04C000DC4425 /* Flows+Injection.swift */; };
 		F84D97C8AC2A976F7D5A423A /* Pods_rewe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30FCC70894B53E374306D298 /* Pods_rewe.framework */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +58,12 @@
 		DE4AC3142B8CDFBF00DC4425 /* Region.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Region.swift; sourceTree = "<group>"; };
 		DE4AC3182B8CE0C800DC4425 /* CountriesRequests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesRequests.swift; sourceTree = "<group>"; };
 		DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryAPIClientType.swift; sourceTree = "<group>"; };
+		DE4AC31D2B8D016C00DC4425 /* MainContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContainer.swift; sourceTree = "<group>"; };
+		DE4AC31F2B8D034600DC4425 /* AllCountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCountriesViewModel.swift; sourceTree = "<group>"; };
+		DE4AC3212B8D046B00DC4425 /* APIServices+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIServices+Injection.swift"; sourceTree = "<group>"; };
+		DE4AC3232B8D047600DC4425 /* ViewModels+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModels+Injection.swift"; sourceTree = "<group>"; };
+		DE4AC3252B8D048300DC4425 /* ViewControllers+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewControllers+Injection.swift"; sourceTree = "<group>"; };
+		DE4AC3272B8D04C000DC4425 /* Flows+Injection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Flows+Injection.swift"; sourceTree = "<group>"; };
 		E75392DF6B0ED89981600596 /* Pods-rewe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rewe.debug.xcconfig"; path = "Target Support Files/Pods-rewe/Pods-rewe.debug.xcconfig"; sourceTree = "<group>"; };
 		F21C6FAD06B86736C5BAA771 /* Pods-rewe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rewe.release.xcconfig"; path = "Target Support Files/Pods-rewe/Pods-rewe.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +118,7 @@
 		DE4AC2DE2B8CB34800DC4425 /* rewe */ = {
 			isa = PBXGroup;
 			children = (
+				DE4AC31C2B8D015900DC4425 /* DI */,
 				DE4AC2F32B8CB3A300DC4425 /* Application */,
 				DE4AC2F52B8CB97A00DC4425 /* UI */,
 				DE4AC30D2B8CDEE200DC4425 /* Model */,
@@ -158,6 +171,7 @@
 			children = (
 				DE4AC3012B8CBB9200DC4425 /* AllCountriesFlow.swift */,
 				DE4AC2FD2B8CBB5F00DC4425 /* AllCountriesViewController.swift */,
+				DE4AC31F2B8D034600DC4425 /* AllCountriesViewModel.swift */,
 			);
 			path = AllCountries;
 			sourceTree = "<group>";
@@ -216,6 +230,18 @@
 				DE4AC31A2B8CE16800DC4425 /* CountryAPIClientType.swift */,
 			);
 			path = APIClients;
+			sourceTree = "<group>";
+		};
+		DE4AC31C2B8D015900DC4425 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				DE4AC31D2B8D016C00DC4425 /* MainContainer.swift */,
+				DE4AC3272B8D04C000DC4425 /* Flows+Injection.swift */,
+				DE4AC3212B8D046B00DC4425 /* APIServices+Injection.swift */,
+				DE4AC3232B8D047600DC4425 /* ViewModels+Injection.swift */,
+				DE4AC3252B8D048300DC4425 /* ViewControllers+Injection.swift */,
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +359,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE4AC3002B8CBB7E00DC4425 /* RegionalCountriesViewController.swift in Sources */,
+				DE4AC3202B8D034600DC4425 /* AllCountriesViewModel.swift in Sources */,
+				DE4AC3222B8D046B00DC4425 /* APIServices+Injection.swift in Sources */,
+				DE4AC3282B8D04C000DC4425 /* Flows+Injection.swift in Sources */,
 				DE4AC2E02B8CB34800DC4425 /* AppDelegate.swift in Sources */,
 				DE4AC30A2B8CC71D00DC4425 /* NetworkConstants.swift in Sources */,
 				DE4AC3152B8CDFBF00DC4425 /* Region.swift in Sources */,
@@ -340,13 +369,16 @@
 				DE4AC30F2B8CDF6A00DC4425 /* Country.swift in Sources */,
 				DE4AC2FA2B8CB9CA00DC4425 /* HomeFlow.swift in Sources */,
 				DE4AC30C2B8CC7F100DC4425 /* APIClient.swift in Sources */,
+				DE4AC3262B8D048300DC4425 /* ViewControllers+Injection.swift in Sources */,
 				DE4AC2F82B8CB99700DC4425 /* HomeTabBarController.swift in Sources */,
 				DE4AC3022B8CBB9200DC4425 /* AllCountriesFlow.swift in Sources */,
+				DE4AC31E2B8D016D00DC4425 /* MainContainer.swift in Sources */,
 				DE4AC3192B8CE0C800DC4425 /* CountriesRequests.swift in Sources */,
 				DE4AC3042B8CBBA800DC4425 /* RegionalCountriesFlow.swift in Sources */,
 				DE4AC3082B8CC41300DC4425 /* APIRequest.swift in Sources */,
 				DE4AC31B2B8CE16800DC4425 /* CountryAPIClientType.swift in Sources */,
 				DE4AC3112B8CDF8C00DC4425 /* Name.swift in Sources */,
+				DE4AC3242B8D047600DC4425 /* ViewModels+Injection.swift in Sources */,
 				DE4AC2E22B8CB34800DC4425 /* SceneDelegate.swift in Sources */,
 				DE4AC3132B8CDFA900DC4425 /* Flags.swift in Sources */,
 			);

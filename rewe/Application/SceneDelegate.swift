@@ -7,6 +7,7 @@
 
 import UIKit
 import RxFlow
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -18,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
 
-        let homeFlow = HomeFlow()
+        Container.main.registerAllServices()
+
+        let homeFlow: HomeFlow = Container.main.resolve(HomeFlow.self)
         FlowCoordinator().coordinate(flow: homeFlow, with: DefaultStepper())
         Flows.use(homeFlow, when: .created) { [weak self] root in
             self?.window?.rootViewController = root
