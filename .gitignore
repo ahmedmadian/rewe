@@ -17,5 +17,19 @@ xcuserdata
 DerivedData
 *.xcuserstate
 Pods/Pods.xcodeproj/xcuserdata/sahgha.xcuserdatad/xcschemes/xcschememanagement.plist
-
+Pods/Target Support Files/Alamofire/
+Pods/Target Support Files/AlamofireImage/
+Pods/Target Support Files/Differentiator/
+Pods/Target Support Files/Pods-rewe/Pods-rewe-frameworks-Debug-input-files.xcfilelist
+Pods/Target Support Files/Pods-rewe/Pods-rewe-frameworks-Debug-output-files.xcfilelist
+Pods/Target Support Files/Pods-rewe/Pods-rewe-frameworks-Release-input-files.xcfilelist
+Pods/Target Support Files/Pods-rewe/Pods-rewe-frameworks-Release-output-files.xcfilelist
+Pods/Target Support Files/Pods-rewe/Pods-rewe-frameworks.sh
+Pods/Target Support Files/RxCocoa/
+Pods/Target Support Files/RxDataSources/
+Pods/Target Support Files/RxFlow/
+Pods/Target Support Files/RxRelay/
+Pods/Target Support Files/RxSwift/
+Pods/Target Support Files/SwiftGen/
+Pods/Target Support Files/Swinject/
 *.generated.swift

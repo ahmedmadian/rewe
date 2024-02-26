@@ -116,6 +116,7 @@
 				DE4AC2D82B8CB34800DC4425 /* Sources */,
 				DE4AC2D92B8CB34800DC4425 /* Frameworks */,
 				DE4AC2DA2B8CB34800DC4425 /* Resources */,
+				221F55E4031B73D40A22FA69 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -172,6 +173,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		221F55E4031B73D40A22FA69 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rewe/Pods-rewe-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rewe/Pods-rewe-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rewe/Pods-rewe-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		9EF654B8E8A902ACF0997AA6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
