@@ -1,0 +1,6 @@
+framework module Pods_rewe {
+  umbrella header "Pods-rewe-umbrella.h"
+
+  export *
+  module * { export * }
+}
