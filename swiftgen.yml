@@ -1,0 +1,9 @@
+xcassets:
+  inputs:
+    - rewe/Resources/Images.xcassets
+    - rewe/Resources/Colors.xcassets
+  outputs:
+    - templateName: swift5
+      output: rewe/Generated/Assets.swift
+      params:
+        enumName: Assets

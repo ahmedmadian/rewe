@@ -12,6 +12,7 @@ import Swinject
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
+    let coordinator = FlowCoordinator()
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
@@ -22,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         Container.main.registerAllServices()
 
         let homeFlow: HomeFlow = Container.main.resolve(HomeFlow.self)
-        FlowCoordinator().coordinate(flow: homeFlow, with: DefaultStepper())
+        coordinator.coordinate(flow: homeFlow, with: DefaultStepper())
         Flows.use(homeFlow, when: .created) { [weak self] root in
             self?.window?.rootViewController = root
             self?.window?.makeKeyAndVisible()

@@ -14,4 +14,5 @@ enum Region: String, Codable {
     case asia = "Asia"
     case europe = "Europe"
     case oceania = "Oceania"
+    case all
 }

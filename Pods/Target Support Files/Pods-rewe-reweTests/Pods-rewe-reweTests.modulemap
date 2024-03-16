@@ -1,0 +1,6 @@
+framework module Pods_rewe_reweTests {
+  umbrella header "Pods-rewe-reweTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

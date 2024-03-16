@@ -30,4 +30,12 @@ extension Resolver {
 
         return service
     }
+
+    public func resolve<Service, Arg1>(_ serviceType: Service.Type, argument: Arg1) -> Service {
+        guard let service = resolve(serviceType, name: nil, argument: argument) else {
+            fatalError("RESOLVER: '\(serviceType)' not resolved.")
+        }
+
+        return service
+    }
 }

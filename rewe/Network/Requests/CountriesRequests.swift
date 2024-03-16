@@ -8,8 +8,7 @@
 import Alamofire
 
 enum CountriesRequests: APIRequest {
-    case all
-    case regional
+    case countries(Region)
 
     var baseURL: URL? {
        URL(string: "https://restcountries.com")
@@ -17,7 +16,7 @@ enum CountriesRequests: APIRequest {
     
     var method: HTTPMethod {
         switch self {
-        case .all, .regional:
+        case .countries:
             return .get
         }
     }
@@ -28,10 +27,13 @@ enum CountriesRequests: APIRequest {
     
     var path: String {
         switch self {
-        case .all:
-            return "/all"
-        case .regional:
-            return "/region/europe"
+        case .countries(let region):
+            switch region {
+            case .all:
+                return "/all"
+            default:
+                return "/region/".appending(region.rawValue.lowercased())
+            }
         }
     }
 }

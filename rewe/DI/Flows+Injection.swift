@@ -11,7 +11,6 @@ import RxFlow
 extension Container {
     func registerFlows() {
         register(HomeFlow.self) { _ in return HomeFlow() }
-        register(AllCountriesFlow.self) { _ in return AllCountriesFlow() }
-        register(RegionalCountriesFlow.self) { _ in return RegionalCountriesFlow() }
+        register(CountriesFlow.self) { _ in return CountriesFlow() }
     }
 }

@@ -20,17 +20,18 @@ extension HomeFlow: Flow {
     }
 
     func navigate(to step: Step) -> FlowContributors {
-        let allCountriesFlow: AllCountriesFlow = Container.main.resolve(AllCountriesFlow.self)
-        let regionalCountriesFlow: RegionalCountriesFlow = Container.main.resolve(RegionalCountriesFlow.self)
+        let allCountriesFlow: CountriesFlow = Container.main.resolve(CountriesFlow.self)
+        let regionalCountriesFlow: CountriesFlow = Container.main.resolve(CountriesFlow.self)
 
-        Flows.use(allCountriesFlow, regionalCountriesFlow, when: .created) { [weak self] (root1: AllCountriesViewController, root2: RegionalCountriesViewController) in
-
+        Flows.use(allCountriesFlow, regionalCountriesFlow, when: .created) { [weak self] (root1: UINavigationController, root2: UINavigationController) in
+            root1.tabBarItem = UITabBarItem(title: nil, image: Assets.Images.world.image, selectedImage: nil)
+            root2.tabBarItem = UITabBarItem(title: nil, image: Assets.Images.europe.image, selectedImage: nil)
             self?.rootViewController.setViewControllers([root1, root2], animated: false)
         }
 
         return .multiple(flowContributors: [.contribute(withNextPresentable: allCountriesFlow,
-                                                        withNextStepper: DefaultStepper()),
+                                                        withNextStepper: OneStepper(withSingleStep: CountriesStep.countries(.all))),
                                             .contribute(withNextPresentable: regionalCountriesFlow,
-                                                        withNextStepper: DefaultStepper())])
+                                                        withNextStepper: OneStepper(withSingleStep: CountriesStep.countries(.europe)))])
     }
 }

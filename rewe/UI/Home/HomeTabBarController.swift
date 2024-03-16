@@ -19,9 +19,9 @@ class HomeTabBarController: UITabBarController {
     // MARK: - Setup
 
     private func setupViewAppearance() {
-        tabBar.backgroundColor = .white
-        tabBar.unselectedItemTintColor = .black
-        tabBar.tintColor = .red
-        tabBar.isTranslucent = false
+        view.backgroundColor = Assets.Colors.primaryBackground.color
+        tabBar.tintColor = Assets.Colors.primaryText.color
+        tabBar.barTintColor = Assets.Colors.primaryBackground.color
+        tabBar.isTranslucent = true
     }
 }

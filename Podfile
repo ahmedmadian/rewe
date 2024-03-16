@@ -24,6 +24,10 @@ def autoGeneration
   pod 'SwiftGen', '~> 6.0'
 end
 
+def testing
+  pod 'RxTest'
+end
+
 target 'rewe' do
   use_frameworks!
   reactive
@@ -31,4 +35,9 @@ target 'rewe' do
   navigation
   networking
   autoGeneration
+
+  target 'reweTests' do
+    inherit! :complete
+    testing
+   end
 end
